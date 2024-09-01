@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop iPhone 15 Pro Max - Electronics Shop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="icon" type="image/x-icon" href="src/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="menu-container">
+        <!-- Menu Toggle and Logo -->
+        <input type="checkbox" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+        <a href="#" class="menu-logo">
+            <img src="src/logo.png" alt="Electronics Shop Logo">
+        </a>
+        <!-- Navigation Links -->
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="prod1.html">iPad</a></li>
+                <li><a href="prod2.html">iPhone</a></li>
+                <li><a href="signup.html">Sign-up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img src="src/15promax1.png" id="productImg">
+                <div class="controls">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+            </div>
+            <div class="details">
+                <h1>iPhone 15 Pro Max</h1><br>
+                <h2>$999.00</h2><br>
+                <h3>30% OFF</h3>
+                <p>Titanium. So strong. So light. So Pro.</p>
+                <form>
+                    <div class="size-select">
+                        <label for="small">
+                            <input type="radio" name="size" id="small">
+                            <span>256GB</span>
+                        </label>
+                        <label for="medium">
+                            <input type="radio" name="size" id="medium">
+                            <span>512GB</span>
+                        </label>
+                        <label for="large">
+                            <input type="radio" name="size" id="large">
+                            <span>1TB</span>
+                        </label>
+                    </div>
+                    <div class="color-select">
+                        <p>Color</p>
+                        <label for="natural titanium">
+                            <input type="radio" name="color" id="red">
+                            <span class="color-1"></span>
+                        </label>
+                        <label for="blue titanium">
+                            <input type="radio" name="color" id="blue titanium">
+                            <span class="color-2"></span>
+                        </label>
+                        <label for="white titanium">
+                            <input type="radio" name="color" id="white titanium">
+                            <span class="color-3"></span>
+                        </label>
+                        </label>
+                        <label for="black titanium">
+                            <input type="radio" name="color" id="black titanium">
+                            <span class="color-4"></span>
+                        </label>
+                    </div>
+                    <div class="quantity-select">
+                        <p>Quantity</p>
+                        <input type="number" value="1">
+                    </div>
+                    <a href="paymentsuccess.html">Buy Now</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let productImg = document.getElementById("productImg");
+        let btn = document.getElementsByClassName("btn");
+
+        btn[0].onclick = function() {
+            productImg.src = "src/15promax1.png";
+            for (let bt of btn) {
+                bt.classList.remove("active");
+            }
+            this.classList.add('active');
+        };
+
+        btn[1].onclick = function() {
+            productImg.src = "src/15promax2.png";
+            for (let bt of btn) {
+                bt.classList.remove("active");
+            }
+            this.classList.add('active');
+        };
+
+        btn[2].onclick = function() {
+            productImg.src = "src/15promax3.png";
+            for (let bt of btn) {
+                bt.classList.remove("active");
+            }
+            this.classList.add('active');
+        };
+    </script>
+</body>
+</html>

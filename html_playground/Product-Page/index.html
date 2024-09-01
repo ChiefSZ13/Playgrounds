@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electronics Shop - Home</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="icon" type="image/x-icon" href="src/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="menu-container">
+        <!-- Menu Toggle and Logo -->
+        <input type="checkbox" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+        <a href="#" class="menu-logo">
+            <img src="src/logo.png" alt="Electronics Shop Logo">
+        </a>
+        <!-- Navigation Links -->
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="prod1.html">iPad</a></li>
+                <li><a href="prod2.html">iPhone</a></li>
+                <li><a href="signup.html">Sign-up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="containerhome">
+        <!-- iPad Pro 2024 -->
+        <div class="producthome">
+            <a href="prod1.html">
+                <img src="src/ipadpro1.png" alt="iPad Pro 2024">
+                <h1>iPad Pro 2024</h1>
+                <p>$899.00 - <strong>Unbelievably thin. Incredibly powerful.</strong></p>
+            </a>
+        </div>
+        <!-- iPhone 15 Pro Max -->
+        <div class="producthome">
+            <a href="prod2.html">
+                <img src="src/15promax1.png" alt="iPhone 15 Pro Max">
+                <h1>iPhone 15 Pro Max</h1>
+                <p>$999.00 - <strong> So strong. So light. So Pro.</strong></p>
+            </a>
+        </div>
+        <div class="countdown-container">
+            <h1>Countdown to Launch</h1>
+            <div id="countdown">
+                <span id="days"></span> days 
+                <span id="hours"></span> hours 
+                <span id="minutes"></span> minutes 
+                <span id="seconds"></span> seconds
+            </div>
+        </div>        
+    </div>
+</body>
+<script>
+    function updateCountdown() {
+        const countdownDate = new Date("June 3, 2024 16:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = days;
+        document.getElementById('hours').innerText = hours;
+        document.getElementById('minutes').innerText = minutes;
+        document.getElementById('seconds').innerText = seconds;
+
+        if (distance < 0) {
+            clearInterval(interval);
+            document.getElementById('countdown').innerHTML = "Launched!";
+        }
+    }
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+</script>
+
+</html>
