@@ -1,0 +1,42 @@
+public class App {
+    static String getName(String name) {
+        return name;
+    }
+
+    static String noMatches() {
+        return "No matches found!";
+    }
+
+    static boolean bigger(int x, int y) {
+        if (x > y) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        int count = 0;
+        System.out.println(getName("Hello, world!"));
+        int[] values = {1, 2, 56, 4, 5, 92, 3};
+        for (int current : values) {
+            switch (current) {
+                case 1:
+                System.out.println("You chose 1");
+                break;
+                case 2:
+                System.out.println("You chose 2");
+                break;
+                default:
+                System.out.println(noMatches());
+            }
+            for (int i = current; i > 0; i /= 10) {
+                count++;
+            }
+        System.out.println(count);
+        System.out.println(bigger(1, 2));
+        count = 0;
+          }
+        good good1 = new 
+    }
+}
